@@ -1,29 +1,29 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
-import Home  from './pages';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages";
 
-import MapPageF from './pages/MyMapF';
+import MapPageF from "./pages/MyMapF";
 
-// import MapPage from './pages/maps';
+import MapPage from "./pages/maps";
 
-import Visual from './pages/weather';
+import Visual from "./pages/weather";
 class App extends React.Component {
-  render(){
-  return (
+  render() {
+    return (
       <Router>
         <Switch>
-        <Route path='/' component={Home}  exact />
-            
-          <Route path='/MyMapF' component={MapPageF} exact />
-      
-          <Route path='/weather' component={Visual} exact />
-          </Switch>
-        </Router>
-    
-  );
+          <Route path="/" component={Home} exact />
+
+          <Route path="/MyMapF" component={MapPageF} exact />
+          <Route path="/maps" component={MapPage} exact />
+
+          <Route path="/weather" component={Visual} exact />
+        </Switch>
+      </Router>
+    );
+  }
 }
-};
 
 export default App;
