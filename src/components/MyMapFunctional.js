@@ -23,6 +23,7 @@ const filtered = MarkerData.filter((mark) => mark.country === "India");
 const MyMapFunctional = () => {
   let global_mark = {};
   const markerOnClick = (mark) => {
+    console.log("marker functuon called1", mark);
     console.log("marker functuon called", mark["city"], global_mark);
     // let cityName = mark["city"];
     console.log("i think this will work", global_mark[mark["city"]]["AQI_P"]);
